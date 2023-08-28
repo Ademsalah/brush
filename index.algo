@@ -1,0 +1,29 @@
+ALGORITHM algorithm_name
+Procedure dot_product(v, u)
+    VAR
+        i : integer
+        p : real
+    
+    FOR i FROM 0 TO 2 STEP 1 DO
+        WRITE ("donner l'element", i+1, "de la vecteur v")
+        READ (v(i))
+        WRITE ("donner l'element", i+1, "de la vecteur u")
+        READ (u(i))
+    END_FOR
+    
+    p <-- 0
+    
+    FOR i FROM 0 TO 2 STEP 1 DO
+        p <-- p + v(i) * u(i)
+    END_FOR
+    
+    WRITE ("le produit scalaire des vecteur v et u est :", p)
+End Procedure
+
+Algorithm algorithm_name
+    VAR
+        v (3): real
+        u (3): real
+    
+    CALL dot_product(v, u)
+End Algorithm
